@@ -4,6 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Zain Munir, Software Architect</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#0F1C33" />
 <meta name="description" content="Zain Munir, Software Architect in Karachi. I build backend systems that scale without the chaos: clean microservices, secure APIs, AI features, and payment platforms thousands use daily." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -186,7 +190,8 @@ ul{margin:0;padding:0;list-style:none}
 .diagram-legend .dot{width:8px;height:8px;border-radius:99px;background:var(--ok);display:inline-block}
 /* principles panel (replaces the About photo) */
 .principles{position:relative;border-radius:var(--r);border:1px solid var(--line-2);background:linear-gradient(180deg,var(--accent-soft),var(--surface));box-shadow:var(--shadow-2);padding:26px 24px;overflow:hidden}
-.principles .ph-k{font-family:var(--font-mono);font-size:.74rem;color:var(--accent-ink);display:flex;align-items:center;gap:.5rem;margin-bottom:1.4rem}
+.principles .ph-k{font-family:var(--font-mono);font-size:.74rem;color:var(--accent-ink);display:flex;align-items:center;gap:.5rem;margin-bottom:.55rem}
+.principles .ph-sub{margin:0 0 1.4rem;color:var(--muted);font-size:.9rem;line-height:1.45}
 .principles .ph-k .d{width:7px;height:7px;border-radius:99px;background:var(--accent)}
 .principles ul{display:grid;gap:1.15rem}
 .principles li{display:grid;grid-template-columns:28px 1fr;gap:.75rem;align-items:start}
@@ -194,7 +199,11 @@ ul{margin:0;padding:0;list-style:none}
 .principles li .ic svg{width:15px;height:15px}
 .principles li .pt{font-family:var(--font-display);font-weight:600;font-size:1rem;color:var(--ink);letter-spacing:-.01em}
 .principles li .ps{margin-top:.15rem;color:var(--muted);font-size:.9rem;line-height:1.45}
-.principles .now{margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--line-2);font-family:var(--font-mono);font-size:.78rem;color:var(--ink-2)}
+.principles .pr-stats{margin-top:1.5rem;padding-top:1.4rem;border-top:1px solid var(--line-2);display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.principles .pr-stats .n{display:block;font-family:var(--font-mono);font-weight:500;font-size:1.35rem;color:var(--ink);line-height:1;letter-spacing:-.02em}
+.principles .pr-stats .n span{color:var(--accent)}
+.principles .pr-stats .l{display:block;margin-top:.3rem;color:var(--muted);font-size:.73rem;line-height:1.2}
+.principles .now{margin-top:1.2rem;font-family:var(--font-mono);font-size:.78rem;color:var(--ink-2)}
 .principles .now b{color:var(--accent-ink);font-weight:500}
 
 @media (prefers-reduced-motion:no-preference){
@@ -544,14 +553,23 @@ section{scroll-margin-top:86px}
   <div class="wrap about-grid">
     <aside class="principles reveal" aria-label="How I work">
       <div class="ph-k"><span class="d"></span> how_i_work</div>
+      <p class="ph-sub">The principles behind every backend I ship, from a school platform used daily to autonomous AI systems.</p>
       <ul>
         <li>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg></span>
           <div><p class="pt">Boundaries over frameworks</p><p class="ps">Clear service boundaries outlast any stack choice.</p></div>
         </li>
         <li>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="8" height="16" rx="1.5"/><rect x="14" y="4" width="7" height="7" rx="1.5"/><rect x="14" y="13" width="7" height="7" rx="1.5"/></svg></span>
+          <div><p class="pt">Decompose, don't rewrite</p><p class="ps">Strangle the monolith one service at a time, with zero downtime.</p></div>
+        </li>
+        <li>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></span>
           <div><p class="pt">Secure by default</p><p class="ps">JWT, OAuth2 and RBAC enforced at the edge, not bolted on.</p></div>
+        </li>
+        <li>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a9 9 0 11-2.64-6.36"/><path d="M21 3v5h-5"/></svg></span>
+          <div><p class="pt">Async by default</p><p class="ps">Events and queues (Kafka, RabbitMQ, Bull) absorb load and decouple work.</p></div>
         </li>
         <li>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span>
@@ -562,7 +580,12 @@ section{scroll-margin-top:86px}
           <div><p class="pt">Trade-offs a team can run</p><p class="ps">Architecture a small team maintains for years, not slideware.</p></div>
         </li>
       </ul>
-      <div class="now">Currently building <b>SimpliEd</b> and <b>Shipwright</b>.</div>
+      <div class="pr-stats">
+        <div><span class="n">6<span>+</span></span><span class="l">years shipping</span></div>
+        <div><span class="n">25k<span>+</span></span><span class="l">daily users</span></div>
+        <div><span class="n">100<span>+</span></span><span class="l">APIs shipped</span></div>
+      </div>
+      <div class="now">Currently building <b>SimpliEd</b>, <b>Shipwright</b>, <b>DevPulse</b> and <b>StockWise</b>.</div>
     </aside>
     <div class="about-copy reveal" data-d="1">
       <h2 id="about-h" class="sr-only">About Zain Munir</h2>
