@@ -1,0 +1,5 @@
+# robots.txt for https://iamzainmunir.github.io/portfolio/
+User-agent: *
+Allow: /
+
+Sitemap: https://iamzainmunir.github.io/portfolio/sitemap.xml
